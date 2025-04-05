@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thấy giống tiktok hôm qua xem chưa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="petals"></div>
+    <div class="container">
+        <h1>Em có yêu anh không?</h1>
+        <div class="photo-section">
+            <div class="photo-frame left-frame">
+                <img src="picture1.jpeg" alt="Ảnh của tôi" class="wedding-photo">
+            </div>
+            <div class="heart">❤️</div>
+            <div class="photo-frame right-frame">
+                <img src="picture.jpeg" alt="Ảnh người yêu" class="wedding-photo">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="yesBtn" onclick="handleYes()">Yêu</button>
+            <button id="noBtn" onclick="handleNo()">Không yêu</button>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="popupText"></span>
+            <button onclick="closePopup()">Đóng</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
