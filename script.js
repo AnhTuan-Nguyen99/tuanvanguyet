@@ -52,7 +52,7 @@ function createPetal() {
     petal.innerHTML = '🌸';
     const leftPosition = Math.random() * 100;
     petal.style.left = `${leftPosition}%`;
-    const duration = 4 + Math.random() * 2;
+    const duration = 8 + Math.random() * 4; // Tốc độ rơi từ 8 đến 12 giây
     petal.style.animationDuration = `${duration}s`;
     document.querySelector('.petals').appendChild(petal);
     petal.addEventListener('animationend', () => {
