@@ -46,14 +46,13 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
-// Tạo cánh hoa rơi
 function createPetal() {
     const petal = document.createElement('div');
     petal.classList.add('petal');
     petal.innerHTML = '🌸';
     const leftPosition = Math.random() * 100;
     petal.style.left = `${leftPosition}%`;
-    const duration = 4 + Math.random() * 2; // 4s đến 6s
+    const duration = 4 + Math.random() * 2;
     petal.style.animationDuration = `${duration}s`;
     document.querySelector('.petals').appendChild(petal);
     petal.addEventListener('animationend', () => {

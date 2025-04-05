@@ -1,14 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0e6f3;
     font-family: Arial, sans-serif;
-    overflow: hidden;
     position: relative;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,8 +17,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
     z-index: 1;
-    padding: 20px; /* Thêm padding cho màn hình nhỏ */
 }
 
 h1 {
@@ -26,7 +28,8 @@ h1 {
     font-size: 3.5em;
     font-family: 'Dancing Script', cursive;
     text-shadow: 2px 2px 5px rgba(255, 77, 109, 0.5);
-    margin-bottom: 30px;
+    margin: 20px 0;
+    word-wrap: break-word;
 }
 
 .petals {
@@ -62,7 +65,8 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .photo-frame {
@@ -74,6 +78,7 @@ h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     padding: 10px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .wedding-photo {
@@ -90,8 +95,9 @@ h1 {
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 10px; /* Giảm gap để nút vừa màn hình nhỏ */
     justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -101,6 +107,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Ngăn nút xuống dòng */
 }
 
 #yesBtn {
@@ -139,7 +146,8 @@ button {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    max-width: 90%; /* Giới hạn chiều rộng trên điện thoại */
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .popup-content span {
@@ -157,10 +165,11 @@ button {
     cursor: pointer;
 }
 
-/* Media Queries cho màn hình nhỏ */
+/* Responsive cho mobile */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em; /* Giảm kích thước chữ */
+        font-size: 1.8em; /* Giảm kích thước tiêu đề */
+        margin: 10px 0;
     }
 
     .photo-section {
@@ -169,8 +178,8 @@ button {
     }
 
     .photo-frame {
-        width: 150px; /* Giảm kích thước khung ảnh */
-        height: 225px;
+        width: 120px; /* Giảm kích thước khung ảnh */
+        height: 180px;
     }
 
     .heart {
@@ -178,16 +187,24 @@ button {
     }
 
     .buttons {
-        flex-direction: column; /* Xếp nút dọc */
-        gap: 15px;
+        gap: 5px; /* Giảm khoảng cách giữa nút */
     }
 
     button {
         padding: 10px 20px; /* Giảm kích thước nút */
-        font-size: 1em;
+        font-size: 1em; /* Giảm chữ */
     }
 
     .petal {
-        font-size: 15px; /* Giảm kích thước cánh hoa trên điện thoại */
+        font-size: 15px; /* Giảm kích thước cánh hoa */
+    }
+
+    .popup-content span {
+        font-size: 1em; /* Giảm chữ trong popup */
+    }
+
+    .popup-content button {
+        padding: 8px 16px; /* Giảm nút đóng */
+        font-size: 0.9em;
     }
 }
